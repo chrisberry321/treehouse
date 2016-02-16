@@ -1,202 +1,173 @@
-/*************************
-Base Styles
-*************************/
-
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  font-family: Helvetica, Helvetica Neue, Arial;
-  font-size: 16px;
-  line-height: 26px;
-}
-
-.wrapper {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.header-container {
-    border-bottom: 20px solid #599a68;
-}
-
-.footer-container,
-.main aside {
-    border-top: 20px solid #599a68;
-}
-
-.header-container,
-.footer-container,
-.main aside {
-    background: #6ab47b;
-
-}
-
-.title {
-    color: white;
-}
-img {
-  max-width: 100%;
-  min-width: 400px;
-  float: left;
-}
-img[alt="trash"] {
-  max-width: 100%;
-  min-width: auto;
-  height: auto;
-}
-
-nav ul {
+html, body {
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  box-sizing: border-box;
+  font-size: 1vmin;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  background: url("../img/top.jpg");
+  background-repeat: repeat-x;
 }
 
-nav a {
-  display: block;
-  margin-bottom: 10px;
-  padding: 15px 0;
+aside img {
+  position: absolute;
+  top: 20em;
+  max-width: 38em;
+  left: 30em;
+}
+
+.logo-two {
+  display: none;
+}
+
+aside a {
+  margin: 1em 1em 0 1em;
+  width: 6em;
   text-align: center;
+  font-size: 4em;
   text-decoration: none;
-  font-weight: bold;
-  color: white;
-  background: #599a68;
+  float: left;
+  display: inline;
+  top: 0;
 }
 
-nav a:hover,
-nav a:visited {
-  color: white;
+.content {
+  position: relative;
+  top: 34em;
+  width: 100%;
+}
+.content h4 {
+  text-align: center;
+  font-size: 5.8em;
+  margin: 0 0 1em 0;
 }
 
-nav a:hover {
-  text-decoration: underline;
+header h2, p{
+  text-align: center;
+  font-size: 4.68em;
+  display: block;
+}
+.character {
+  float: left;
+  width: 46%;
+}
+.photo {
+  max-width: 1800px;
 }
 
-.main {
-  padding: 30px 0;
+.first{
+  color: red;
+  font-weight: 400;
+  font-size: 2.5em;
+  margin-bottom: 0;
+
+}
+.last{
+  color: red;
+  font-weight:bolder;
+  font-size: 3.4em;
+  margin-top: 0;
+}
+.content img {
+  float: left;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin: 0 5px 5px;
+  padding: 0 5px 5px;
+  display: inline;
+
+}
+.character p {
+  max-width: 300px;
+  text-align: center;
+
 }
 
-.main article h1 {
-  font-size: 2em;
+footer {
+  clear: both;
+  text-align: center;
+  font-size: .62em;
+}
+@media screen and (min-width:500px){
+
+  body {
+    font-size: 4px;
+  }
+
+  aside img{
+    max-width: 300px;
+  }
+  .character {
+    max-width: 300px;
+  }
+
+  header h2{
+    padding: 0 1px;
+    float: right;
+    text-align: right;
+  }
+  header p{
+    clear: both;
+  }
+
+  h4 {
+    clear: both;
+  }
 }
 
-.main aside {
-  color: white;
-  padding: 0px 5% 28px;
-  display: table;
-}
+@media screen and (min-width:780px) {
+  .logo-two {
+    display: block;
+    position: absolute;
+    top: 27px;
+    left: 22px;
+    max-width: 200px;
+  }
+  .logo-one {
+    top: 102px;
+    left: 45px;
+  }
+  .navigation a{
+    float: right;
+  }
 
-.footer-container footer {
-  color: white;
-  padding: 20px 0;
-}
-
-
-/*************************
-Media Queries
-*************************/
-
-@media only screen and (min-width: 450px) {
-  .title {
+  header {
+    float: right;
+    margin-top: 0;
+    padding-top: 0;
+    clear: both;
+    width: 70%;
     text-align: center;
   }
-  nav a {
+
+  .content {
+    top: 40px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  header {
     float: left;
-    width: 30%;
-    margin: 0 0 0 5%;
-    padding: 15px 1%;
-    margin-bottom: 0;
+    max-width: 700px;
+    margin-left: 250px;
+
   }
 
-  nav li:first-child a {
-    margin-left: 0;
-  }
-}
-@media only screen and (min-width: 650px),
-       only screen and (max-width: 750px) {
-         img[alt="math"] {
-           /*margin: 0 5%;*/
-          min-width: 100%;
-         }
-       }
-
-@media only screen and (min-width: 750px),
-       only screen and (min-width: 750px) and (orientation: landscape) {
-
-  .title {
-    float: left;
-
-    font-size: 1.5em;
+  aside.navigation {
+    max-width: 1020px;
   }
 
-  nav {
-    float: right;
-    width: 60%;
-  }
-
-  nav a {
-    padding: 20px 1%;
-  }
-
-  .main article {
-    float: left;
-    width: 57%;
-  }
-
-  .main aside {
-    float: right;
-    width: 38%;
+  header h2 {
+    float: none;
+    text-align: center;
   }
 
 
-}
-
-@media only screen and (min-width: 1075px) {
-
-  .wrapper {
-    width: 1026px;
-    margin: 0 auto;
-  }
-  .footer-container {
-    position: relative;
-    box-sizing: 0;
-    height: 120px;
-    width: 100%;
-  }
-
-  .title {
-    font-size: 2em;
-  }
-
-  nav a {
-    padding: 25px 1%;
-  }
-
-}
 
 
-/*************************
-Clearfix
-*************************/
-
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  *zoom: 1;
 }
